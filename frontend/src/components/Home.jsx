@@ -13,8 +13,11 @@ export default function Home() {
   const programRef = useRef(null)
   const yogRef = useRef(null)
   const reviewRef = useRef(null)
-  const ratingRef = useRef(null)
   const branchRef = useRef(null)
+  const fRatingRef = useRef(null)
+  const iRatingRef = useRef(null)
+  const cRatingRef = useRef(null)
+  const pRatingRef = useRef(null)
 
   const handleLogin = async () => {
     try {
@@ -65,21 +68,6 @@ export default function Home() {
                             </label>
                             <label className="form-control w-full max-w-xs">
                               <div className="label">
-                                <span className="label-text">Rating</span>
-                              </div>
-                              <select className="select select-bordered"
-                                ref={ratingRef}
-                              >
-                                <option disabled selected>Enter Rating (Scale of 5)</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                              </select>
-                            </label>
-                            <label className="form-control w-full max-w-xs">
-                              <div className="label">
                                 <span className="label-text">Year Of Graduation</span>
                               </div>
                               <input type="text" placeholder="Enter Graduation Year..." className="input input-bordered w-full max-w-xs"
@@ -110,6 +98,66 @@ export default function Home() {
                                 ref={reviewRef}
                               ></textarea>
                             </label>
+                            <label className="form-control w-full max-w-xs">
+                              <div className="label">
+                                <span className="label-text">Rate Faculty</span>
+                              </div>
+                              <select className="select select-bordered"
+                                ref={fRatingRef}
+                              >
+                                <option disabled selected>Enter Rating (Scale of 5)</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </label>
+                            <label className="form-control w-full max-w-xs">
+                              <div className="label">
+                                <span className="label-text">Rate Infrastructure</span>
+                              </div>
+                              <select className="select select-bordered"
+                                ref={iRatingRef}
+                              >
+                                <option disabled selected>Enter Rating (Scale of 5)</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </label>
+                            <label className="form-control w-full max-w-xs">
+                              <div className="label">
+                                <span className="label-text">Rate Placement Success</span>
+                              </div>
+                              <select className="select select-bordered"
+                                ref={pRatingRef}
+                              >
+                                <option disabled selected>Enter Rating (Scale of 5)</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </label>
+                            <label className="form-control w-full max-w-xs">
+                              <div className="label">
+                                <span className="label-text">Rate Curriculum</span>
+                              </div>
+                              <select className="select select-bordered"
+                                ref={cRatingRef}
+                              >
+                                <option disabled selected>Enter Rating (Scale of 5)</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </label>
                             <div className="card-actions justify-center">
                               <button
                                 className="btn btn-primary"
@@ -121,8 +169,11 @@ export default function Home() {
                                     "program": programRef.current.value,
                                     "branch": branchRef.current.value,
                                     "year_of_graduation": yogRef.current.value,
-                                    "rating": ratingRef.current.value,
                                     "review": reviewRef.current.value,
+                                    "faculty_rating": fRatingRef.current.value,
+                                    "infrastructure_rating": iRatingRef.current.value,
+                                    "placement_rating": pRatingRef.current.value,
+                                    "curriculum_rating": cRatingRef.current.value
                                   });
                                   window.location.href = "/";
                                 }}                               >
