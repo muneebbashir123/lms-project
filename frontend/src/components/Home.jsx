@@ -144,9 +144,11 @@ export default function Home() {
           <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content text-center">
               <div className="max-w-md">
-                <h1 className="text-5xl font-bold">Title...</h1>
+                <h1 className="text-5xl font-bold">LMS Software for College rating System</h1>
                 <p className="py-6">
-                  About ...
+                 Mohammed Ameen Khan - 1AM21CS117 <br/>
+                 Mohammed Shoaib - 1AM21CS119 <br/>
+                 Muneeb Bashir - 1AM21CS123
                 </p>
                 <button className="btn btn-primary" onClick={handleLogin}>Login</button>
               </div>
